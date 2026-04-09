@@ -8,7 +8,7 @@ Public companion repository for the Fylla website and for the publishable workfl
 
 <p>
   <a href="https://deltaskincare.it/">Live Website</a> |
-  <a href="docs/periocular-workflow.md">Periocular Workflow</a>
+  <a href="notebooks/Fylla_Public_Workflow.ipynb">Public Workflow Notebook</a>
 </p>
 
 <p>
@@ -91,9 +91,9 @@ This public repository does **not** release the production source code. It only 
 
 ## Periocular-analysis workflow
 
-The eye-area extension is described in a public-safe way in [docs/periocular-workflow.md](docs/periocular-workflow.md).
+The eye-area extension is described in a public-safe way in [notebooks/Fylla_Public_Workflow.ipynb](notebooks/Fylla_Public_Workflow.ipynb).
 
-That document explains the shareable parts of the work:
+That notebook explains the shareable parts of the work:
 
 - face and landmark-guided cropping of the under-eye region
 - transfer learning on a pretrained facial backbone
@@ -109,7 +109,7 @@ To keep this repository portfolio-safe and respectful of ownership boundaries, I
 - the private production repository
 - the acne-model weights and related implementation
 - the periocular-model weights
-- the original Colab notebook
+- the original private Colab notebook
 - internal training code, exact hyperparameters, and deployment details
 - company-specific business logic or operational integrations
 
@@ -117,4 +117,4 @@ To keep this repository portfolio-safe and respectful of ownership boundaries, I
 
 - This repository is a showcase, not a source release of the full production application.
 - Brand assets shown here are included only to document the product I worked on.
-- If you want the technical narrative, start from [the periocular workflow document](docs/periocular-workflow.md).
+- If you want the technical narrative, start from [the public workflow notebook](notebooks/Fylla_Public_Workflow.ipynb).
