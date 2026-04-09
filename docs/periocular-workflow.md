@@ -14,18 +14,32 @@ The goal of this extension was to move Fylla beyond acne-only analysis and add a
 
 ## High-level pipeline
 
-```mermaid
-flowchart LR
-    A["Face image"] --> B["Detect face and landmarks"]
-    B --> C["Crop periocular region"]
-    C --> D["Extract features with pretrained facial backbone"]
-    D --> E["Train multi-task head for bags and age-related cues"]
-    E --> F["Run label-quality checks and clean noisy samples"]
-    F --> G["Extend with dark-circle task"]
-    G --> H["Use replay to preserve previous behavior"]
-    H --> I["Tune thresholds and export inference checkpoint"]
-    I --> J["Integrate into Fylla website inference flow"]
-```
+<table>
+  <tr>
+    <th align="center" width="25%">Region focus</th>
+    <th align="center" width="25%">Backbone adaptation</th>
+    <th align="center" width="25%">Label-quality pass</th>
+    <th align="center" width="25%">Dark-circle extension</th>
+  </tr>
+  <tr>
+    <td align="center">Detect the face, localize landmarks, and crop a stable under-eye region.</td>
+    <td align="center">Start from a pretrained facial backbone and specialize it for periocular cues.</td>
+    <td align="center">Filter likely noisy labels before relying on the training split as-is.</td>
+    <td align="center">Add a dedicated dark-circle output on top of the earlier eye-area workflow.</td>
+  </tr>
+  <tr>
+    <th align="center" width="25%">Retention strategy</th>
+    <th align="center" width="25%">Threshold tuning</th>
+    <th align="center" width="25%">Checkpoint export</th>
+    <th align="center" width="25%">Website integration</th>
+  </tr>
+  <tr>
+    <td align="center">Replay earlier periocular samples so the new task does not erase previous behavior.</td>
+    <td align="center">Tune decision thresholds on validation behavior instead of relying only on raw logits.</td>
+    <td align="center">Package the model into an inference checkpoint suitable for product use.</td>
+    <td align="center">Expose the module through the Fylla website without releasing private code or weights.</td>
+  </tr>
+</table>
 
 ## Workflow design
 

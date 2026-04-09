@@ -50,36 +50,44 @@ The production website is organized around a simple user journey:
 
 This public repository does **not** release the production source code. It only presents the product scope and the shareable technical workflow.
 
-## Visual material
+## Product views
 
-### Report output layout
+### Dashboard entry point
+
+<div align="center">
+  <img src="assets/screenshots/dashboard-entry.png" alt="Fylla dashboard entry point" width="90%" />
+  <br />
+  <sub><b>The authenticated dashboard built to start a new analysis, inspect history, and manage users.</b></sub>
+</div>
+
+### Analysis and report review
+
+<div align="center">
+  <img src="assets/screenshots/analysis-report-review.png" alt="Fylla analysis and report review screen" width="90%" />
+  <br />
+  <sub><b>A concrete product view showing the uploaded image, the generated PDF report, and the face-analysis outcome side by side.</b></sub>
+</div>
+
+### Generated PDF pages
 
 <table>
   <tr>
-    <th align="center" width="50%">Analysis page</th>
-    <th align="center" width="50%">Routine page</th>
+    <th align="center" width="50%">Report page 1</th>
+    <th align="center" width="50%">Report page 2</th>
   </tr>
   <tr>
     <td align="center" width="50%">
-      <img src="assets/screenshots/report-analysis-page.png" alt="Fylla report analysis page" width="100%" />
+      <img src="assets/screenshots/pdf-report-page-1.png" alt="Fylla PDF report page one" width="100%" />
     </td>
     <td align="center" width="50%">
-      <img src="assets/screenshots/report-routine-page.png" alt="Fylla report routine page" width="100%" />
+      <img src="assets/screenshots/pdf-report-page-2.png" alt="Fylla PDF report page two" width="100%" />
     </td>
   </tr>
   <tr>
-    <td align="center"><sub>The report layout explains the face-analysis outcome, skin-tone context, and acne-related summary.</sub></td>
-    <td align="center"><sub>The second page turns the analysis into a readable routine recommendation flow.</sub></td>
+    <td align="center"><sub>The first page summarizes the face-analysis output and the skin-tone context in report form.</sub></td>
+    <td align="center"><sub>The second page translates the analysis into a structured three-step routine recommendation.</sub></td>
   </tr>
 </table>
-
-### Interface art direction
-
-<div align="center">
-  <img src="assets/screenshots/landing-visual.jpeg" alt="Fylla landing visual direction" width="82%" />
-  <br />
-  <sub><b>One of the visual assets used to shape the website's landing and brand atmosphere.</b></sub>
-</div>
 
 ## Periocular-analysis workflow
 
